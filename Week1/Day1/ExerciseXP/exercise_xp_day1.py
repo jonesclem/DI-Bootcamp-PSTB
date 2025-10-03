@@ -42,9 +42,9 @@ print(my_fav_numbers)
 my_fav_numbers.remove(19)
 print(my_fav_numbers)
 
-# friend_fav_numbers = {13, 20, 34, 50}
-# our_fav_numbers = my_fav_numbers.union(friend_fav_numbers)
-# print(our_fav_numbers)
+friend_fav_numbers = {13, 20, 34, 50}
+our_fav_numbers = my_fav_numbers.union(friend_fav_numbers)
+print(our_fav_numbers)
 
 ##Exercise6
 my_tuple = (1, 2, 3)
@@ -83,14 +83,14 @@ sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pa
 while "Pastrami sandwich" in sandwich_orders:
     sandwich_orders.remove("Pastrami sandwich")
 
-# print(sandwich_orders)
+print(sandwich_orders)
 
 #Create an empty list called finished_sandwiches.
 finished_sandwiches = []
 
 #One by one, remove each sandwich from the sandwich_orders while adding them to the finished_sandwiches list.
 sandwich_orders_two = sandwich_orders[:] #copy of the first list to iterate without skipping items
-# print(sandwich_orders_two)
+print(sandwich_orders_two)
 
 
 for sandwich in sandwich_orders_two:
