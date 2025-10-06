@@ -15,6 +15,8 @@ multiples = []
 for i in range (1, length+1): # creating a loop iteration in a range from 1 to length+1 to ensure its runs on full chosen length
     multiples.append(number * i) # for each iteration add the multiple of the chosen number in the list
 
+#multiples = [num * i for i in range (1, length + 1)]
+
 # display the result list
 print(multiples)
 
