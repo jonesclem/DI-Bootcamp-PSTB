@@ -239,4 +239,4 @@ base_price = 10
 topping_price = 2.5
 total_cost = base_price + len(toppings) * topping_price
 print(f"Your pizza toppings: {', '.join(toppings)}")
-print(f"The total cost of your pizza is: ${total_cost:.2f}")
+print(f"The total cost of your pizza is: ${total_cost:.2f}") # force the output to float and two decimals

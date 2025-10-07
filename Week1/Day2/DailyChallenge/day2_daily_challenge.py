@@ -16,7 +16,7 @@ user_dict = {}
 for index, letter in enumerate(user_word): # iterates over the characters of user_word to return pairs of index and letters
     # Only consider alphabetic letters (ignore spaces, digits, punctuation, etc.)
     if letter.isalpha():
-        if letter in user_dict: # check if letter is already exists as a key in the dictionary
+        if letter in user_dict: # check if letter already exists as a key in the dictionary
             user_dict[letter].append(index) # if condition true add the index of the letter to dictionary
         else:
             user_dict[letter] = [index] #If this is the first time we see that letter, create a new key in the dictionary with a single-item list containing the current index.
