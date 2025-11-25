@@ -1,0 +1,14 @@
+[11/25/25 17:18:41] INFO     Processing request of type ListResourcesRequest                                                              server.py:674
+=== Resources ===
+
+                    INFO     Processing request of type ListToolsRequest                                                                  server.py:674
+=== Tools ===
+- add
+
+                    INFO     Processing request of type ReadResourceRequest                                                               server.py:674
+=== Read resource: greeting://hello ===
+Resource content (non-text): uri=AnyUrl('greeting://hello') mimeType='text/plain' meta=None text='Hello, hello!'
+
+                    INFO     Processing request of type CallToolRequest                                                                   server.py:674
+=== Call tool: add(1, 7) ===
+Structured result: {'result': 8}
