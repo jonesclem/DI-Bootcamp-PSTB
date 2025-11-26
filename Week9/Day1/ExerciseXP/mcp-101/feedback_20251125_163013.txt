@@ -1,0 +1,16 @@
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day1/ExerciseXP/mcp-101/client.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day1/ExerciseXP/mcp-101/server.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day1/ExerciseXP/mcp-101/terminal_capture.txt
+suggestions for improvement:
+- Consider adding error handling to the server (e.g., for invalid input types).
+- Add comments to explain the purpose of different sections of the code.
+Correctness: 100%
+-----
