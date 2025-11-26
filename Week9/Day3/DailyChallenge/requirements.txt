@@ -1,0 +1,30 @@
+# --- Core App / UI ---
+streamlit
+python-dotenv
+
+# --- LangChain Ecosystem (mutually compatible versions) ---
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-core==0.2.43
+langchain-groq==0.1.10
+
+# --- LLM / Embeddings / Vector Stores ---
+tiktoken
+faiss-cpu
+
+# Needed to support sentence-transformers
+torch==2.1.0
+sentence-transformers==2.5.1
+
+# --- Tools & External APIs ---
+tavily-python
+
+# Optional: Google tools
+google-api-python-client
+
+# --- Notebook Support ---
+jupyter
+nbconvert
+
+# --- Utility ---
+requests
