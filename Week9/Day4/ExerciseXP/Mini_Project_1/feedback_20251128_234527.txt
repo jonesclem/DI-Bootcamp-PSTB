@@ -1,0 +1,70 @@
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/requirements.txt
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/__init__.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/agent.py
+suggestions for improvement:
+- The code does not directly implement the integration of at least two third-party MCP servers from the specified GitHub repository. It uses hardcoded servers (fetch, filesystem, kb_metadata) instead of allowing dynamic configuration and connection to external servers. This is a major deviation from the requirements.
+- The code lacks a Streamlit integration as suggested in the instructions.
+- The code assumes hardcoded tool names and server names within the prompt and the `_call_tool` function. This needs to be more dynamic to support arbitrary third-party MCP servers.
+- The error handling could be improved by providing more specific feedback to the LLM about why a tool call failed, enabling it to make more informed decisions on retries or alternative strategies.
+Correctness: 60%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/config.py
+suggestions for improvement:
+- The code addresses the 'Config' aspect of the mini-project, which is good. However, it doesn't contain any of the core logic for integrating third-party MCP servers, running them locally, or using an LLM to plan and orchestrate tool calls. It only defines a configuration class.
+- Consider adding validation to ensure mutually exclusive configurations are handled correctly (e.g., if 'groq' is selected, ensure API key is provided).
+- The code could be improved by including examples of how to set the environment variables.
+Correctness: 50%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/kb_metadata_server/__init__.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/kb_metadata_server/server.py
+suggestions for improvement:
+- This is a custom MCP server example but it doesn't address the problem. The task is to integrate at least two third-party MCP servers from the provided list and build an end-to-end agentic application.
+- The provided code defines a custom MCP server. While the server code is correct, it does not fulfill the mini-project's requirements of integrating *third-party* MCP servers.
+- The example should include the integration of at least two third-party servers from the provided list along with the local server, and demonstrate planning, error handling, observability, configuration, and reproducibility as specified.
+Correctness: 0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/llm_groq.py
+suggestions for improvement:
+- This code snippet focuses solely on interacting with the GroqCloud LLM, addressing only a small part of the overall mini-project requirements.
+- The code does not implement any of the MCP server integration, tool orchestration, or error handling aspects described in the chapter content.
+- Consider expanding this code to encompass the broader requirements of the project, including MCP server interaction and agentic planning.
+Correctness: 0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/llm_ollama.py
+suggestions for improvement:
+- This code provides a helper function for interacting with Ollama, which is a useful component, but it does not address the core requirements of the mini-project: integrating third-party MCP servers, using an LLM to plan and orchestrate tool calls, handling errors, and ensuring reproducibility. The code only focuses on interacting with Ollama, neglecting the MCP server integration and orchestration aspects.
+- The code lacks the integration of multiple MCP servers. It needs to be expanded to discover and interact with the tools exposed by these servers.
+- The orchestration logic, where the LLM plans the sequence of tool calls, is missing. The code should incorporate a planning component that utilizes the LLM to decide which tool to call based on the user's goal and the available tools.
+- Error handling should be improved by adding specific checks and retries for common errors that may occur when interacting with MCP servers, such as timeouts or invalid inputs.
+- The code should include logging to track the inputs and outputs of each tool call, which is crucial for observability and debugging.
+- The setup instructions and configuration using environment variables are not included in the submission and are important for reproducibility.
+Correctness: 0.0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/mcp_client.py
+suggestions for improvement:
+- The provided code implements an MCP client wrapper, which is a helpful component for interacting with MCP servers. However, it doesn't directly fulfill the primary task of the mini-project: building an end-to-end agentic application that integrates at least two third-party MCP servers with your own, and uses an LLM for planning and orchestration. The code focuses on setting up and calling tools on individual servers, but lacks the core orchestration logic and LLM integration.
+- The code needs to incorporate the selection of two third-party MCP servers from the provided GitHub repository. The current code uses example server names ('fetch', 'filesystem', 'kb_metadata') which are not necessarily third-party and are hardcoded.
+- The code needs to implement the LLM-based planning and orchestration logic as described in the 'Your Task' section. This involves prompting the LLM with the user goal and available tools, and then executing tool calls based on the LLM's decisions. The current code doesn't include any LLM interaction.
+- The code lacks the error handling and observability features described in the 'Functional requirements' section. While it catches exceptions during tool calls, it doesn't implement retries, fallback steps, or detailed logging of tool call inputs/outputs. Observability is mentioned, but only basic `print` statements are present.
+- The code does not integrate a UI such as Streamlit as per the requirements.
+Correctness: 40%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/ui_streamlit.py
+suggestions for improvement:
+- The provided code implements a Streamlit UI for a research agent, but it doesn't directly address the core requirement of integrating and using at least two third-party MCP servers as specified in the chapter. It focuses on the UI aspects and agent execution but lacks the crucial integration of external MCP servers.
+- The code needs to incorporate mechanisms for discovering and interacting with third-party MCP servers based on the provided GitHub repository link.
+- The agent logic should be modified to utilize the tools exposed by the integrated MCP servers in its planning and execution steps.
+Correctness: 0%
+-----
