@@ -1,0 +1,11 @@
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day3/ExerciseXP/requirements.txt
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day3/ExerciseXP/starter.py
+suggestions for improvement:
+- Consider adding more comments to explain the logic within the take_action method of the PenguinAgent class.
+- The original scientist implementation used an LLM call, but it has been removed and replaced with a heuristic. This may be a limitation of using free LLMs or due to rate limiting. Consider mentioning this explicitly.
+Correctness: 100%
+-----
