@@ -1,0 +1,1 @@
+"""Minimal MCP research assistant package."""

@@ -1,0 +1,1 @@
+"""Custom FastMCP-based server used to store simple KB metadata entries."""
