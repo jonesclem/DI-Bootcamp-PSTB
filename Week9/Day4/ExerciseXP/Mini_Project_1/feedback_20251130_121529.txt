@@ -1,0 +1,67 @@
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/requirements.txt
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/__init__.py
+suggestions for improvement:
+- The submitted code only contains the top-level package declaration, lacking the core logic to fulfill the mini-project requirements.
+- Implement the MCP client to interact with at least two third-party MCP servers.
+- Incorporate an LLM for planning and orchestration of tool calls.
+- Add error handling, observability, and configuration based on environment variables.
+Correctness: 0.0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/agent.py
+suggestions for improvement:
+- Consider adding more detailed error handling, specifically for network-related issues when calling MCP servers.
+- Implement a mechanism to prevent infinite loops in the agent's planning process, perhaps by tracking previously attempted plans and avoiding their repetition.
+- While env-based configuration is mentioned, providing a concrete example or a helper function to load configuration parameters would enhance usability.
+Correctness: 90%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/app.py
+suggestions for improvement:
+- Consider adding error handling within the main function to catch potential exceptions during agent execution and display user-friendly error messages in the Streamlit UI.
+- The security score could be improved by implementing input validation and sanitization, especially for the 'user_goal' text area, to prevent potential prompt injection attacks.
+- Add more detailed comments, especially for sections that involve complex logic or integration with external services (GroqCloud/Ollama and MCP servers).
+Correctness: 75%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/config.py
+suggestions for improvement:
+- The code focuses solely on GroqCloud and doesn't provide a configuration option for Ollama, contradicting the requirement to support either GroqCloud or Ollama.
+- The code only configures commands for 'fetch', 'filesystem' and 'kb_metadata', while the prompt requires integration with at least 2 third-party MCP servers. These commands do not represent a 3rd party integration based on the description in the chapter. It mentions a web/search server + files/CSV server or repo/git server + issues/Jira or GitHub server
+- Consider adding default values for all environment variables to improve the out-of-the-box experience.
+- Implement more robust validation of the configuration, including checking if the specified commands are executable.
+Correctness: 20%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/kb_metadata_server/__init__.py
+suggestions for improvement:
+- This package definition is not related to the project requirements described in the prompt.
+- The prompt specifies building an end-to-end agentic application by integrating at least two third-party MCP servers, running them locally, and using an LLM for planning and orchestration. This package definition does not implement any of that functionality.
+- The code lacks the core components required by the prompt such as MCP server integration, LLM orchestration, error handling, and configuration management.
+Correctness: 0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/kb_metadata_server/server.py
+suggestions for improvement:
+- The provided code only implements *one* MCP server. The instructions explicitly require integrating *two* third-party MCP servers *plus* creating a custom server. This code only addresses the custom server portion, and doesn't include integration with third-party servers, an LLM for planning/orchestration, error handling, observability, config, or reproducibility. The question explicitly required an end-to-end application that *integrates* at least two third-party MCP servers.
+- The docstrings could be improved to be more informative.
+- Consider adding logging for improved observability.
+- For a production environment, more robust error handling (e.g., try-except blocks with specific exception handling) would be beneficial.
+Correctness: 20%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/llm_groq.py
+suggestions for improvement:
+- This code only provides the Groq LLM client helper, but the task requires building an end-to-end agentic application integrating at least two third-party MCP servers, running them locally, using an LLM for planning and orchestration, and handling errors. This code addresses only a small part of the overall task.
+- The code lacks the core functionality of integrating with MCP servers and the orchestration logic. Focus on implementing the full pipeline as described in the task description.
+- Consider adding error handling for network issues and API usage limits beyond the basic HTTP error checking. Also, avoid printing the entire response body (even truncated) in a production environment; log only relevant details.
+Correctness: 50%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/src/mcp_client.py
+suggestions for improvement:
+- The code fulfills many of the requirements, including integrating with MCP servers, handling tool calls, and discovering tools. However, it's missing the LLM integration for planning and orchestration, as well as the error handling and Streamlit integration.
+- The `Config` class is not defined, so a complete evaluation is not possible. However, the code assumes the existence of a `config.py` file. Include its definition.
+- The code lacks explicit error handling for timeouts/bad inputs with retries or fallback steps as required. This needs to be implemented.
+- Observability is achieved through logging, which satisfies the requirement. However, consider more structured logging.
+- The docstrings are good, but consider adding type hints to function signatures.
+- The current implementation handles the server startup and tool execution but is disconnected from the planning and orchestration using the LLM.
+Correctness: 70%
+-----
