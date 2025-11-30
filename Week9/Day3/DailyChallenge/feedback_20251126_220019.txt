@@ -1,0 +1,25 @@
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day3/DailyChallenge/agentic_rag.ipynb
+suggestions for improvement:
+- Consider adding error handling within the `rag_answer` function to gracefully manage potential issues during document retrieval or chain invocation.
+- Implement LangSmith tracing to monitor and debug the agent's performance, as suggested by the chapter content.
+- Add input validation to the `run_agent` function to handle cases where the query is empty or invalid.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day3/DailyChallenge/agentic_rag.py
+suggestions for improvement:
+- Consider adding error handling for network requests within the tools.
+- The code could benefit from more comments, especially explaining the purpose of each component in the RAG and agent pipelines.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day3/DailyChallenge/app.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day3/DailyChallenge/requirements.txt
+suggestions for improvement:
+- This submission is a `requirements.txt` file. It lists Python packages, not code that implements the agentic RAG application or interacts with a tool-using agent as required by the prompt.
+- Ensure that `app.py` adheres to streamlit best practices for maintaining a responsive user interface and preventing long processing times from blocking the main thread.
+- Consider using `st.cache_data` or `st.cache_resource` to cache expensive operations, such as loading models or initializing vector stores.
+Correctness: 0.0%
+-----
