@@ -1,0 +1,52 @@
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/app.py
+suggestions for improvement:
+- The provided code is for the Streamlit UI of the MCP Agentic application, which relies on other modules for its core logic (MCP servers, custom tools, LLM planning, orchestration). Therefore, it does not implement the core requirements of creating custom tools, composing servers, or using an LLM for planning as described in the Chapter Content/Questions.
+- To improve, provide the contents of the files the Streamlit UI calls, such as `my_mcp_server.py`, `mcp_multi_client.py`, `llm_client.py`, and `orchestrator.py` because those are the files implementing the main goals of the assignment.
+Correctness: 0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/config.py
+suggestions for improvement:
+- Consider using a more robust configuration management library (e.g., `pydantic-settings`) for complex configurations, providing better validation and type safety.
+- The code could benefit from more comprehensive error handling, such as catching `FileNotFoundError` when loading the `.env` file or handling potential exceptions when splitting environment variables.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/llm_client.py
+suggestions for improvement:
+- The code implements the LLM client with planning, which is part of the requirements. However, it does not include the implementation of the MCP server with custom tools (mentioned in `my_mcp_server.py`, which is missing) or the composition of your server with external servers. Thus, it only partially addresses the problem.
+- The validation logic for messages and tools is good. Consider adding more specific validation based on expected schemas.
+- Ensure proper error handling and logging throughout the application.
+Correctness: 70%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/mcp_multi_client.py
+suggestions for improvement:
+- The code implements the core functionality of the MCP multi-client as described in the prompt. However, it would be more complete to see the implementation of the custom MCP server (my_mcp_server.py) and how it integrates with the agentic client.
+- The code could benefit from more detailed error handling, especially around server startup and tool execution. For example, include specific exception handling for common errors encountered when starting a server via `stdio_client`.
+- Consider adding logging beyond the debug prints. A proper logging system would allow for more structured debugging and tracing of the agent's execution flow.
+Correctness: 75%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/my_mcp_server.py
+suggestions for improvement:
+- Consider adding more comprehensive error handling and input validation to increase robustness.
+- For enhanced security, implement authentication and authorization mechanisms to control access to the MCP server and its tools, although this might be beyond the immediate scope of the assignment.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/orchestrator.py
+suggestions for improvement:
+- Consider adding more comprehensive error handling and logging to improve debugging and monitoring.
+- Implement more sophisticated rate limiting to prevent abuse and ensure fair usage of tools.
+- Explore options for caching tool results to reduce redundant computations and improve performance.
+Correctness: 90%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/requirements.txt
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/test_mcp.py
+suggestions for improvement:
+- The code fulfills most of the requirements, but it's a manual integration test, not a fully agentic client that uses an LLM to plan actions.  It demonstrates tool discovery and composition but lacks the LLM-driven planning component which is crucial.
+- Consider adding error handling and validation of tool inputs and outputs to improve robustness.
+- Make the file paths configurable rather than hardcoded.
+- Implement the LLM-driven planning aspect to fully meet the project requirements.
+Correctness: 75%
+-----
