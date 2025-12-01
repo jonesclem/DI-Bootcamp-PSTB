@@ -1,0 +1,7 @@
+# Mini Project – MCP Agentic Application (dependencies for Part 1 + Part 2)
+
+
+mcp[cli]
+openai>=1.40.0
+python-dotenv
+streamlit
