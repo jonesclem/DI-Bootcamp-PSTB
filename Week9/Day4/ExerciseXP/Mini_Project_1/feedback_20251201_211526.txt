@@ -1,0 +1,50 @@
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/app.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/config.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/llm_client.py
+suggestions for improvement:
+- The code doesn't explicitly show how it integrates with *two* third-party MCP servers. While it sets up an LLM client and includes the infrastructure to make decisions about tool use, it lacks the crucial element of integrating with external MCP servers as defined by the prompt.
+- The code could benefit from a clearer example of how 'tools_for_llm' is populated with tool definitions obtained from the connected MCP servers. This would make the tool selection more concrete.
+- Consider adding retry mechanisms or more sophisticated error handling within the `plan` method to address potential issues with LLM calls (e.g., rate limiting, temporary outages).
+Correctness: 70%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/mcp_multi_client.py
+suggestions for improvement:
+- Consider adding more robust error handling for server startup failures, perhaps with retry mechanisms or fallback strategies.
+- Add logging for configuration loading and potential issues.
+- Ensure the `config.py` and `load_mcp_server_configs` functions handle cases where the configuration file is missing or invalid.
+Correctness: 90%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/my_mcp_server.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/orchestrator.py
+suggestions for improvement:
+- Consider adding more specific error handling for different types of exceptions during tool execution.
+- Improve configurability by allowing the user to specify the max_steps and max_calls_per_tool via environment variables or a configuration file.
+- Add logging for the overall orchestration process, including the start and end times, the user goal, and the final answer.
+Correctness: 95%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/requirements.txt
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/test_mcp.py
+suggestions for improvement:
+- The code fulfills the requirements of integrating multiple MCP servers and using them in a sequence, but it lacks the crucial LLM-driven planning and orchestration as defined in the prompt. The tool calls are hardcoded.
+- Error handling is missing; the script doesn't handle timeouts or bad inputs.
+- The logging is basic. The prompt asked to log each tool call (inputs/outputs summarized; no secrets), not just print the final results.  Inputs could be better logged/summarized.
+- The config loading from `config.py` isn't shown, so it's impossible to determine if it correctly uses environment variables.  This is a critical part of the requirements.
+- The code uses hardcoded paths, which reduces reproducibility.
+Correctness: 70%
+-----
