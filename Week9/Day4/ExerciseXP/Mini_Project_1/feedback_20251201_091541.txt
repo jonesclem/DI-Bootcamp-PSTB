@@ -1,0 +1,82 @@
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/app.py
+suggestions for improvement:
+- The code provided is an application using MCP servers, but it does not fulfill the core requirement of the mini-project: integrating two *third-party* MCP servers.
+- The application seems to be designed to use a pre-built or example MCP setup (`smart_data_scout`), rather than requiring the user to select and integrate existing servers from the provided GitHub repository.
+- There is no code present that demonstrates the discovery, connection, and utilization of external MCP servers.
+Correctness: 0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/insights_server/__init__.py
+suggestions for improvement:
+- The provided code snippet is just a docstring and doesn't implement any of the required functionality. It needs to include the server setup, tool definition, MCP integration, and LLM orchestration logic as outlined in the mini-project instructions.
+- The code should include error handling, logging, and configuration options as described in the functional requirements.
+Correctness: 0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/insights_server/server.py
+suggestions for improvement:
+- This code only implements one server, the "insights" server. To fully address the mini-project, it needs to be integrated with at least two other third-party MCP servers.
+- The mini-project requires the creation of an end-to-end agentic application that integrates the created "insights" server with other servers. The current code is only a server, without the client-side integration, orchestration, and planning.
+- There's no error handling or retry logic implemented for tool calls, as required. The analyze_csv_snippet function includes error handling for CSV parsing, but this is insufficient for the end-to-end application's error handling requirements.
+Correctness: 10.0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/requirements.txt
+suggestions for improvement:
+- The submission only provides a list of Python dependencies. It does not include any code that attempts to implement the mini-project as described in the chapter content.
+- The submission fails to address any of the functional requirements outlined in the chapter content, such as integrating third-party MCP servers, using an LLM for planning, handling errors, or providing observability.
+Correctness: 0.0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/smart_data_scout/__init__.py
+suggestions for improvement:
+- The provided code is only an `__init__.py` file and a docstring, which doesn't implement any of the required functionality. It needs the actual implementation of the MCP client, server integration, LLM orchestration, error handling, logging, and Streamlit integration.
+- The `__init__.py` file is not inherently incorrect, but it's insufficient to address the mini-project requirements.
+Correctness: 0.0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/smart_data_scout/agent.py
+suggestions for improvement:
+- The code provides a good structure for an agent, but it doesn't directly demonstrate the integration of two *third-party* MCP servers as required by the prompt. The `MCPClientManager` seems like an abstraction, but there's no concrete implementation showing the connection to specific third-party servers.
+- The `plan_next_action` function is crucial but its implementation is not provided. The LLM planning and orchestration are central to the task, and without seeing how the LLM is prompted and used to select tools and arguments, it's impossible to assess the correctness of this part.
+- Error handling is present, which is good, but it could be improved by adding more specific error handling based on the types of exceptions that might occur when interacting with different MCP servers.
+- Configuration via environment variables is not explicitly shown in the provided code, although it's mentioned as a requirement.
+Correctness: 50%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/smart_data_scout/config.py
+suggestions for improvement:
+- Consider adding more detailed comments explaining the purpose of each configuration parameter within the `load_config` function.
+- While the environment variables are used, consider adding a check to ensure that required environment variables like `GROQ_API_KEY` are present when the `groq` backend is selected, providing a helpful error message if they are missing.
+Correctness: 100%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/smart_data_scout/llm_backends.py
+suggestions for improvement:
+- The code only provides the LLM backend implementations (Groq and Ollama) and the necessary interfaces. It does not implement the core requirements of the mini-project, such as integrating third-party MCP servers, running them locally, using the LLM for planning and orchestration, implementing error handling, observability, or a simple startup sequence.
+- The code lacks the actual MCP client implementation that connects to and utilizes the third-party MCP servers as specified in the prompt. It only defines how to communicate with LLMs after a tool has already been selected and run.
+- Consider adding comprehensive error handling, including specific exception handling for network errors, API errors from Groq or Ollama, and invalid responses.
+- Implement observability by logging tool calls, inputs, outputs, and error messages as described in the prompt.
+- Ensure configuration is managed using environment variables as suggested by the prompt for maximum flexibility.
+Correctness: 40%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/smart_data_scout/logging_utils.py
+suggestions for improvement:
+- This code snippet focuses only on logging, not the core requirements of the mini-project. It needs to implement the integration of third-party MCP servers, LLM orchestration, and error handling as described in the prompt.
+- Consider restructuring the code to address the actual project requirements, which include server integration, LLM planning, and execution of tool calls.
+Correctness: 0%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/smart_data_scout/mcp_client.py
+suggestions for improvement:
+- Add error handling for when a server is unavailable or returns an unexpected error during tool listing or execution.
+- Implement logging for each tool call, including input arguments and outputs, as per the requirements.
+- Consider adding retry logic with exponential backoff for unreliable tool calls.
+- Implement input validation based on the tool's input schema, preventing malformed requests to the LLM or tool calls.
+Correctness: 70%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/smart_data_scout/planner.py
+suggestions for improvement:
+- The code demonstrates a good understanding of how to structure the LLM prompt for planning and orchestration, but it lacks the crucial integration of third-party MCP servers as requested by the prompt. The system prompt mentions duckduckgo-mcp-server and CSV Editor, but these are examples and not actually integrated as running servers that the agent interacts with.
+- The code includes example servers in the prompt but needs to run these servers locally.
+- The code focuses on the planning aspect but doesn't provide an end-to-end implementation that connects to actual MCP servers, making requests, and handling responses. This is a key requirement of the mini-project.
+Correctness: 50%
+-----
+URL: URL: https://github.com/jonesclem/DI-Bootcamp-PSTB/blob/main/Week9/Day4/ExerciseXP/Mini_Project_1/smart_data_scout/types.py
+suggestions for improvement:
+- This code only defines dataclasses and types, which is a good start for structuring the project, but it doesn't actually implement any of the core requirements of the mini-project, such as integrating third-party MCP servers, using an LLM for planning, handling errors, or providing observability.
+- The code needs to implement the MCP client orchestration logic, including discovering tools, prompting the LLM, executing tool calls, and handling failures. This will involve making requests to the MCP servers and the LLM backend (GroqCloud or Ollama).
+Correctness: 0.0%
+-----
